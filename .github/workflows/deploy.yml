@@ -39,20 +39,3 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
-```
-
-4. Click **"Commit changes..."** at the top right to save it.
-
----
-
-### 2. CRITICAL: Update your Repo Name
-I noticed in your screenshot that your repository name is `AI-ML_Learning_Program_Tracker_App`. For the links to work, your `vite.config.js` file **must** match this name exactly.
-
-Go to your `vite.config.js` file in GitHub and make sure the `base` line looks like this:
-
-```javascript
-// Change the base to match your exact repo name
-export default defineConfig({
-  plugins: [react()],
-  base: '/AI-ML_Learning_Program_Tracker_App/', 
-})
