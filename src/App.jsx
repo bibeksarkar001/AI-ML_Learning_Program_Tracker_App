@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import ReactDOM from 'react-dom/client'; // ADD THIS LINE
 import { initializeApp } from 'firebase/app';
 import { 
   getFirestore, 
@@ -339,5 +340,14 @@ export default function App() {
         </div>
       )}
     </div>
+  );
+}
+// This is the code that actually renders the app onto your page
+const rootElement = document.getElementById('root');
+if (rootElement) {
+  ReactDOM.createRoot(rootElement).render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
   );
 }
